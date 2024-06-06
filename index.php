@@ -14,7 +14,9 @@
   
 </body>
 </html>
+ 
 <?php
+  // what the duck
   $item = "pizza";
   $price = 5.99;
   $quantity = $_POST["quantity"];
