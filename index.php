@@ -20,10 +20,15 @@
 
 <?php
   if (isset($_POST["login"])) {
-    $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-    $age = filter_input(INPUT_POST, "age", FILTER_SANITIZE_NUMBER_INT);
-    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+    // FILTER_VALIDATE_INT returns an empty string if it doesn't pass validation
+    $age = filter_input(INPUT_POST, "age", FILTER_VALIDATE_INT);
+    $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
 
+  }
+
+  if(empty($email)) {
+    echo "That email wasn't valid";
+  } else {
     echo "Your email is {$email}";
   }
   
