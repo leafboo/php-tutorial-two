@@ -1,7 +1,5 @@
-
 <?php
-// include makes reusable code possible
-  include("header.html");
+  include("header.html")
 ?>
 
 <!DOCTYPE html>
@@ -12,11 +10,11 @@
   <title>Document</title>
 </head>
 <body>
-  This is the Home page <br>
-  Stuff about your home page can go here <br>
+  This is the About page <br>
+  Stuff about your About page can go here <br>
 </body>
 </html>
 
 <?php
-  include("footer.html");
+  include("footer.html")
 ?>
